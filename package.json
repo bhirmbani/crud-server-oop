@@ -1,0 +1,24 @@
+{
+  "name": "rn-crud-server",
+  "version": "1.0.0",
+  "description": "crud server for rn crud",
+  "main": "./src/services/server.js",
+  "author": "bm",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.111.1"
+  },
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "start": "node src/services/server.js",
+    "dev": "nodemon src/services/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^5.21.2",
+    "sqlite3": "^4.1.0"
+  }
+}
