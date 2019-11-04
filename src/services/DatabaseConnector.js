@@ -19,7 +19,7 @@ class DatabaseConnector {
 
   // }
 
-  async connect() {
+  connect() {
     try {
       const success = this.connection
       if (success) console.log('Connected to database')

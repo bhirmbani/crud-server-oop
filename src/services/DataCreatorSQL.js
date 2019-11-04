@@ -4,11 +4,6 @@ class DataCreator {
     this.model = model
   }
 
-  initModel(model) {
-    this.model = model
-    return this
-  }
-
   async create(payload) {
     try {
       const data = await this.model.create(payload)
@@ -28,12 +23,22 @@ class DataCreator {
     
   }
 
-  update() {
-
+  async update(newValues, where) {
+    try {
+      const data = await this.model.update(newValues, { where })
+      return data
+    } catch (error) {
+      return error
+    }
   }
 
-  delete() {
-
+  async delete(where) {
+    try {
+      const data = await this.model.destroy({ where })
+      return data
+    } catch (error) {
+      return error
+    }
   }
 }
 

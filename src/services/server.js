@@ -10,6 +10,6 @@ app.use(express.json()) // for parsing application/json
 sequelize.sync()
 database.SQL().connect()
 
-app.use('/api', router.todoRoutes)
+app.use('/api/todo', router.todoRoutes)
 
-app.listen(port, () => console.log('Server running at port 3000'))
+app.listen(port, () => console.log(`Server running at port ${port}`))
